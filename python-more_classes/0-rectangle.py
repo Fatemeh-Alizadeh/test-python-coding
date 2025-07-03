@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle."""
+"""
+Defines a class Rectangle.
+"""
 
 
 class Rectangle:
     """Represents a rectangle."""
 
-    def __init__(self, width, height=0):
+    def __init__(self, width=0, height=0):
         """Initialize the rectangle with optional width and height."""
         self.__width = width
         self.__height = height
@@ -14,11 +16,6 @@ class Rectangle:
     def width(self):
         """Retrieve the width of the rectangle."""
         return self.__width
-
-    @property
-    def height(self):
-        """Retrieve the height of the rectangle."""
-        return self.__height
 
     @width.setter
     def width(self, width):
@@ -38,6 +35,11 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         self.__width = width
 
+    @property
+    def height(self):
+        """Retrieve the height of the rectangle."""
+        return self.__height
+
     @height.setter
     def height(self, height):
         """
@@ -55,3 +57,11 @@ class Rectangle:
         if height < 0:
             raise ValueError('height must be >= 0')
         self.__height = height
+
+
+my_rectangle = Rectangle(2, 4)
+print(my_rectangle.__dict__)
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle.__dict__)
