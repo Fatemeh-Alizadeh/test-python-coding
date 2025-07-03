@@ -5,15 +5,15 @@ Defines a square with size and a method to compute its area.
 
 
 class Square:
+    """Represents a square."""
 
     def __init__(self, size=0):
+        """Initialize the square with a given size."""
         self.__size = size
 
     @property
     def size(self):
-        """
-        Get the current size of the square.
-        """
+        """Get the current size of the square."""
         return self.__size
 
     @size.setter
@@ -35,7 +35,5 @@ class Square:
         self.__size = size
 
     def area(self):
-        """
-        Return the current square area.
-        """
+        """Return the current square area."""
         return self.__size * self.__size
