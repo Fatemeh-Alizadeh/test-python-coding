@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module check if two objects are exactly the same.
+"""
 
 def is_same_class(obj, a_class):
     """
