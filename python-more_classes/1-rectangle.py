@@ -5,7 +5,13 @@ Defines a class Rectangle.
 
 
 class Rectangle:
-    """Represents a rectangle."""
+    """Represents a rectangle.
+    args:
+        width: width of the rectangle.
+        height: height of the rectangle.
+    retuen:
+          a rectangle.
+    """
 
     def __init__(self, width=0, height=0):
         """Initialize the rectangle with optional width and height."""
